@@ -1,39 +1,24 @@
-group 'com.jiguang.jpush'
-version '1.0-SNAPSHOT'
-
-buildscript {
-    repositories {
-        mavenCentral()
-        google()
-        jcenter()
-    }
-
-    dependencies {
-        classpath 'com.android.tools.build:gradle:8.0.2'
-    }
+plugins {
+    id 'com.android.library'
 }
-
-rootProject.allprojects {
-    repositories {
-        mavenCentral()
-        google()
-        jcenter()
-    }
-}
-
-apply plugin: 'com.android.library'
 
 android {
-    namespace = "com.jiguang.jpush"  // 必填，指定命名空间
-
-    compileSdkVersion 34             // 升级到最新SDK版本，和你项目保持一致
+    namespace = "com.jiguang.jpush"
+    compileSdk = 34
 
     defaultConfig {
-        minSdkVersion 19             // 建议最低19，官方推荐
+        minSdk = 19
     }
-    lintOptions {
+
+    lint {
         disable 'InvalidPackage'
     }
+}
+
+repositories {
+    google()
+    mavenCentral()
+    jcenter()
 }
 
 dependencies {
