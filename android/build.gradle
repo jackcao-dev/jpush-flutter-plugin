@@ -24,10 +24,12 @@ rootProject.allprojects {
 apply plugin: 'com.android.library'
 
 android {
-    compileSdkVersion 28
+    namespace = "com.jiguang.jpush"  // 必填，指定命名空间
+
+    compileSdkVersion 34             // 升级到最新SDK版本，和你项目保持一致
 
     defaultConfig {
-        minSdkVersion 17
+        minSdkVersion 19             // 建议最低19，官方推荐
     }
     lintOptions {
         disable 'InvalidPackage'
