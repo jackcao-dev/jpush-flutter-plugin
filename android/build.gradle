@@ -37,8 +37,8 @@ android {
 }
 
 dependencies {
-    implementation ('cn.jiguang.sdk:jpush:5.7.2') {
-        exclude group: 'cn.jiguang.sdk', module: 'jcore'  // 排除默认的 jcore
+    implementation ('cn.jiguang.sdk:jpush:5.7.3') {
+        exclude group: 'cn.jiguang.sdk', module: 'jcore'
     }
-    implementation 'cn.jiguang.sdk:jcore:5.2.1'          // 使用新版 jcore
+    implementation 'cn.jiguang.sdk:jcore:5.0.4'
 }
